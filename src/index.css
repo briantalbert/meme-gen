@@ -9,9 +9,10 @@ body {
 
 .app {
   width: 550px;
-  height: 550px;
+  height: max(550px, auto);
   border:solid #672280;
   border-radius: 5px;
+  margin: 35px;
 
 }
 .header {
@@ -88,6 +89,10 @@ body {
   text-align: center;
 
   color: #FFFFFF;
+}
 
-
+.meme-image {
+  width: min(477px, auto);
+  height: auto;
+  margin: 36px;
 }
