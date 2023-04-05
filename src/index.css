@@ -91,8 +91,45 @@ body {
   color: #FFFFFF;
 }
 
+.caption {
+  color: white;
+  font-size: 2em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  max-width: 477px;
+  text-align: center;
+  text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+
+}
+
+.top-caption {
+  top: 5px;
+}
+
+.bottom-caption {
+  bottom: 5px;
+}
+
 .meme-image {
-  width: min(477px, auto);
+  max-width: 477px;
   height: auto;
+}
+
+.meme {
+  display: flex;
+  justify-content: center;
   margin: 36px;
+  border: 1px dashed #711F8D;
+  position: relative;
+
 }
