@@ -1,17 +1,24 @@
 import React from "react"
-import memeData from "./memeData.js"
+//import memeData from "./memeData.js"
 
 export default function Meme() {
-    let initialMeme = memeData.data.memes[Math.floor(Math.random() * 100)].url
+    //let initialMeme = memeData.data.memes[Math.floor(Math.random() * 100)].url
 
     let [meme, setMeme] = React.useState({
         topText: '',
         bottomText: '',
-        randomImage: initialMeme
+        randomImage: "https://i.imgflip.com/1bij.jpg"
     })
 
+    let [allMemeImages, setAllMemeImages] = React.useState([])
 
-    let [allMemeImages, setAllMemeImages] = React.useState(memeData.data.memes)
+    React.useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemeImages(data.data.memes))
+    }, [])
+
+    
     
     function getMemeImage(e=null) {
         if(e){e.preventDefault();};
