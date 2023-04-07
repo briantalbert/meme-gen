@@ -87,13 +87,14 @@ body {
   line-height: 19px;
   /* identical to box height */
   text-align: center;
-
+  align-self: center;
   color: #FFFFFF;
 }
 
 .caption {
   color: white;
   font-size: 2em;
+  letter-spacing: normal;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-transform: uppercase;
   position: absolute;
@@ -119,8 +120,14 @@ body {
 .bottom-caption {
   bottom: 5px;
 }
-
 .meme-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 36px;
+}
+
+.meme-image > img {
   max-width: 477px;
   height: auto;
 }
